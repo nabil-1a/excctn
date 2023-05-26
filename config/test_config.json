@@ -1,0 +1,17 @@
+{
+    "exp_dir": "/Work19/2019/nabil/excctn_1/exp",
+    "enhancement_dir": "/Work19/2019/nabil/excctn_1/exp/excctn_1",
+    "model": {
+        "module": "model.excctn_1",
+        "main": "EXCCTN",
+        "args": {}
+    },
+    "dataset": {
+        "module": "dataset.tt_dataset",
+        "main": "TestDataset",
+        "args": {
+            "mixture_dataset": "/Work19/2019/nabil/reverb_data/tt/mix",
+            "limit": 4000
+        }
+    }
+}

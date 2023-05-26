@@ -1,0 +1,58 @@
+{
+    "seed": 0,
+    "description": "",
+    "save_location": "/Work19/2019/nabil/excctn_1/exp",
+    "n_gpu": 1,
+    "use_cudnn": true,
+    "trainer": {
+        "epochs": 25,
+        "save_checkpoint_interval": 5,
+        "validation_interval": 1,
+        "find_max": true,
+        "z_score": false
+    },
+    "model": {
+        "module": "model.excctn_1",
+        "main": "EXCCTN",
+        "args": {}
+    },
+    "loss_function": {
+        "module": "model.loss",
+        "main": "mse_loss",
+        "args": {}
+    },
+    "optimizer": {
+        "lr": 0.001,
+        "beta1": 0.9
+    },
+    "train_dataset": {
+        "module": "dataset.tr_dataset",
+        "main": "TrainDataset",
+        "args": {
+            "mixture_dataset": "/Work19/2019/nabil/reverb_data/tr/mix",
+            "clean_dataset": "/Work19/2019/nabil/reverb_data/tr/s1",
+            "limit": null,
+            "offset": 0
+        }
+    },
+    "validation_dataset": {
+        "module": "dataset.tr_dataset",
+        "main": "TrainDataset",
+        "args": {
+            "mixture_dataset": "/Work19/2019/nabil/reverb_data/cv/mix",
+            "clean_dataset": "/Work19/2019/nabil/reverb_data/cv/s1",
+            "limit": 4000,
+            "offset": 0
+        }
+    },
+    "train_dataloader": {
+        "shuffle": true,
+        "num_workers": 7,
+        "batch_size": 4
+    },
+    "validation_dataloader": {
+        "shuffle": true,
+        "num_workers": 7,
+        "batch_size": 4
+    }
+}
