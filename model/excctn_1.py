@@ -1,6 +1,5 @@
 # Created on 2020/09
 # Author: M. Nabil Sarwar
-# Training file for exCCTN - "AN EXTENDED COMPLEX CONVOLUTIONAL NETWORK FOR SINGLE-CHANNEL SPEECH ENHANCEMENT, ICASSP 2021"
 
 import torch.nn as nn
 import torch.nn.functional as Fn
